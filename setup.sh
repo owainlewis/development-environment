@@ -3,16 +3,9 @@
 EMAIL="owain@owainlewis.com"
 
 install_core_packages () {
-
-  sudo apt-get update
-
-  sudo apt-get install -y \
-	  open-vm-tools \
-	  open-vm-tools-desktop \
-	  i3 \
-	  feh \
-	  zsh \
-	  nitrogen
+    for package in open-vm-tools open-vm-tools-desktop i3 feh zsh; do
+        [[ $(apt-cache search $package) ]] && apt-get install -y $package
+    done
 }
 
 install_java () {
@@ -27,6 +20,13 @@ configure_git () {
 install_spacemacs () {
     rm -rf ~/.emacs.d
     git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+}
+
+install_ansible () {
+    sudo apt-get install software-properties-common
+    sudo apt-add-repository ppa:ansible/ansible
+    sudo apt-get update
+    sudo apt-get install -y ansible
 }
 
 install_zsh () {
