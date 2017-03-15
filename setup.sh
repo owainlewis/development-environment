@@ -17,6 +17,12 @@ configure_git () {
     git config --global user.name "Owain Lewis"
 }
 
+install_nodejs () {
+    curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+    sudo apt-get update -y
+    sudo apt-get install -y nodejs
+}
+
 install_spacemacs () {
     rm -rf ~/.emacs.d
     git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
