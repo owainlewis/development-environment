@@ -73,6 +73,10 @@ install_docker () {
     sudo apt-get update
 
     sudo apt-get -y install docker-engine
+    
+    sudo usermod -aG docker $USER
+    
+    sg docker -c "bash"
 }
 
 setup_ssh () {
