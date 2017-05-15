@@ -3,7 +3,7 @@
 EMAIL="owain@owainlewis.com"
 
 install_core_packages () {
-    for package in open-vm-tools open-vm-tools-desktop i3 feh zsh; do
+    for package in i3 feh zsh; do
         [[ $(apt-cache search $package) ]] && apt-get install -y $package
     done
 }
@@ -91,3 +91,8 @@ install_sbt () {
     sudo apt-get update
     sudo apt-get install sbt
 }
+
+
+install_zsh
+
+install_spacemacs
