@@ -1,15 +1,11 @@
 # Development Env
 
-Development environment for Ubuntu Xenial.
+Development environment for Ubuntu 17.04.
 
-## Getting started  
+## Getting started
+
+Each page has it's own installer
 
 ```
-git clone git@github.com:owainlewis/development-environment.git
-cd development-environment
-source setup.sh
-
-# Install stuff
-
-install_sbt
+sudo scripts/sbt.sh
 ```   

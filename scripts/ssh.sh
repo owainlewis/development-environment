@@ -1,3 +1,5 @@
+#!/usr/env/bin/bash
+
 ssh-keygen -t rsa -b 4096 -C "owain@owainlewis.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
