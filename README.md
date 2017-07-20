@@ -12,8 +12,14 @@ sudo scripts/sbt.sh
 
 ## Notes
 
+Apt config
+
+```
+Acquire::http::proxy "http://emea-proxy.uk.oracle.com:80";
+Acquire::https::proxy "http://emea-proxy.uk.oracle.com:80";
 ```
 
+```
 EMAIL="owain@owainlewis.com"
 
 apt install -y git-core zsh emacs i3
