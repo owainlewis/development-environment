@@ -1,9 +1,9 @@
 #!/bin/bash
 
+USER="Owain Lewis"
 EMAIL="owain@owainlewis.com"
 
-install_core_packages () {
-    for package in i3 feh zsh; do
-        [[ $(apt-cache search $package) ]] && apt-get install -y $package
-    done
-}
+apt install -y git-core zsh emacs i3 feh
+
+git config --global user.email "${EMAIL}"
+git config --global user.name ${USER}
